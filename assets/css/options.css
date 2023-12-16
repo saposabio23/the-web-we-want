@@ -76,10 +76,12 @@
   background-color: var(--color-white);
   height: 100%;
   display: flex;
+    border-radius: 0 var(--border-s) var(--border-s) 0;
+
 }
 
 .bookmarks div:nth-last-child(1) {
-  border-radius: 0 var(--border-m) var(--border-m) 0;
+  border-radius: 0 var(--border-s) var(--border-s) 0;
 }
 
 .bookmarks div:hover {
@@ -165,11 +167,11 @@
   height: 100%;
   flex-direction: column;
   position: fixed;
-  border-radius: var(--border-m) 0 0 var(--border-m);
+  border-radius: var(--border-s) 0 0 var(--border-s);
 
 }
 
-.header > div {
+.header>div {
   width: 30px;
   height: calc(100% / 3);
   font-weight: 400;
@@ -185,12 +187,12 @@
 }
 
 .header div:nth-child(1) {
-  border-radius: var(--border-m) 0 0 0px;
+  border-radius: var(--border-s) 0 0 0px;
 }
 
 
 .header div:nth-child(3) {
-  border-radius: 0px 0 0 var(--border-m);
+  border-radius: 0px 0 0 var(--border-s);
 }
 
 .header div:hover {}
@@ -204,8 +206,8 @@
   padding: var(--space-m);
   box-sizing: border-box;
   z-index: 5;
-  display: none; 
-  color:  white !important;
+  display: none;
+  color: white !important;
 }
 
 .panel>div::-webkit-scrollbar {
@@ -470,10 +472,6 @@
   text-align: center;
 }
 
-.optionsPage>span:nth-child(1) {
-  background-color: var(--color-background);
-  color: var(--color-secondary);
-}
 
 .notesPage>span:nth-child(1) {
   background-color: var(--color-secondary);
@@ -487,13 +485,32 @@
   margin-top: var(--space-m);
 }
 
-.optionsPage>div>button {
+.optionsPage>div>button,
+.optionsPage>div>a {
   width: 100%;
   height: fit-content;
   display: flex;
-  flex-direction: column;
+  flex-direction: column !important;
   align-items: center;
   justify-content: space-around;
-  aspect-ratio: 3/2;
+  aspect-ratio: 1;
   color: white;
+  text-decoration: none !important;
+}
+
+.optionsPage>div>a>button {
+  flex-direction: column;
+  align-items: center;
+  justify-content: inherit;
+  height: 100%;
+}
+
+.optionsPage>div>a>button:hover {
+  color: inherit;
+}
+
+.optionsPage img {
+  max-height: 30px;
+  width: max-content;
+  filter: invert(1);
 }

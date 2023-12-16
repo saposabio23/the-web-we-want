@@ -21,7 +21,7 @@ html::-webkit-scrollbar {
 
 ::selection {
     color: var(--color-white);
-    background-color: var(--color-black);
+    background-color: var(--thisColor);
 }
 
 
@@ -55,6 +55,14 @@ a:hover {
 
 button a {
     text-decoration: none !important;
+}
+
+a button {
+    color: inherit;
+    text-decoration: none;
+    text-decoration-style: none;
+    word-break: normal;
+    display: flex;
 }
 
 button {
@@ -300,38 +308,29 @@ section {
 @keyframes living {
 
     0% {
-        box-shadow: inset 0px 0 0px 0px var(--color-white);
         border-radius: 0px;
 
 
     }
 
     50% {
-        box-shadow: inset 0px 0 80px 0px var(--color-white);
         border-radius: 350px;
 
     }
 
     100% {
-        box-shadow: inset 0px 0 0px 0px var(--color-white);
         border-radius: 0px;
     }
 
 }
 
-.inside{
-    box-shadow: inset 0px 0 0px 0px var(--color-white) !important;
+.inside {
     border-radius: 0px !important;
     background-color: var(--color-background) !important;
     transition: all 5s ease-in-out;
     color: transparent !important;
+    animation: none !important;
 }
-
-.inside div, .inside span, .inside textarea .inside p{
-    color: transparent !important;
-    text-shadow: none !important;
-}
-
 
 .supertitleback {
     color: var(--color-white);
@@ -349,14 +348,15 @@ section {
 
 .titleStart p {
     /* font-family: var(--ff-citations); */
-    color: var(--color-background);
+    color: var(--color-white);
     max-width: 750px;
     text-align: center;
     margin-bottom: 0;
-    font-weight: 600;
+    /* font-weight: 600; */
+    letter-spacing: 0.4px;
 }
 
-.titleStart>span {
+#infoStart {
     font-size: var(--fs-middle);
     margin-bottom: var(--space-s);
     opacity: 0;
@@ -364,6 +364,12 @@ section {
     line-height: var(--lh-middle);
     margin: var(--space-l) 0 0 0;
     color: white;
+    position: absolute;
+    top: var(--space-s);
+}
+
+#infoStart span {
+    text-decoration: underline !important;
 }
 
 
@@ -374,12 +380,12 @@ section {
     color: var(--color-white);
     border-radius: var(--border-m);
     background-color: transparent;
-    padding:calc(var(--space-s)/2) calc(var(--space-s));
+    padding: calc(var(--space-s)/2) calc(var(--space-s));
     font-weight: 400;
 }
 
 .display-infoStart {
-    animation: 4s display05 ease-in-out infinite;
+    animation: 5s display05 ease-in-out infinite;
 }
 
 @keyframes display05 {
@@ -389,7 +395,7 @@ section {
     }
 
     50% {
-        opacity: .4;
+        opacity: 1;
     }
 
     100% {
@@ -612,4 +618,18 @@ sup {
     width: 3px;
     background-color: hsl(0deg 0% 0% / 10%);
     border-radius: 50px;
+}
+
+
+
+
+
+.credits {
+    background: transparent;
+    border-radius: var(--border-s);
+    border: 1px dashed var(--color-secondary);
+    padding: var(--space-s);
+    box-sizing: border-box;
+    font-size: var(--fs-small);
+    line-height: var(--lh-normal);
 }

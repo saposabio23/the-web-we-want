@@ -363,9 +363,6 @@ window.addEventListener('mousedown', function (e) {
 });
 
 
-function hideTooltip() {
-    tooltip.classList.add('hiddenHard')
-}
 
 
 

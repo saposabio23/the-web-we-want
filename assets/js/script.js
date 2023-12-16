@@ -10,10 +10,21 @@ var supertitlefront = document.querySelector('.supertitlefront')
 document.addEventListener("DOMContentLoaded", function () {
     setTimeout(function () {
         document.querySelector('#infoStart').classList.add('display-infoStart');
-    }, 10000)
+    }, 5000)
 });
 
 supertitlefront.focus()
+
+
+function lancerTout() {
+    positionFootnote()
+    document.querySelector('.tout').classList.add('appear')
+    document.querySelector('.start').classList.add('inside');
+    setTimeout(function () {
+        document.querySelector('.tout').style.visibility = ('visible')
+        document.querySelector('.tout').classList.remove('appear');
+    }, 2000)
+}
 
 supertitlefront.addEventListener('input', function () {
     const passw = "<h1>the web we want</h1>";
@@ -21,15 +32,7 @@ supertitlefront.addEventListener('input', function () {
     var value = supertitlefront.value.toLowerCase()
 
     if (value.match(passw)) {
-        positionFootnote()
-        document.querySelector('.tout').classList.add('appear')
-
-        document.querySelector('.start').classList.add('inside');
-        setTimeout(function () {
-            document.querySelector('.tout').style.visibility = ('visible')
-            document.querySelector('.tout').classList.remove('appear');
-        }, 2000)
-
+        lancerTout()
     }
     else {
         // document.querySelector('#infoStart').style.display = ('none') 

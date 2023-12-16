@@ -7,6 +7,14 @@
 
 @media screen and (max-width : 800px) {
 
+    .start{
+        display: none;
+    }
+
+    .tout {
+        visibility: visible;
+    }
+
     .bookRight {
         width: 100%;
     }

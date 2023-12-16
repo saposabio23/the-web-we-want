@@ -18,7 +18,7 @@ function toggleFullscreen(elem) {
         } else if (elem.webkitRequestFullscreen) {
             elem.webkitRequestFullscreen(Element.ALLOW_KEYBOARD_INPUT);
         }
-        document.querySelector('.fullscreen').innerHTML = 'Sortir du plein écran';
+        document.querySelector('.fullscreen').innerHTML = '<img src="assets/icons/exit-fs.svg">Sortir du plein écran';
     } else {
         if (document.exitFullscreen) {
             document.exitFullscreen();
@@ -29,7 +29,7 @@ function toggleFullscreen(elem) {
         } else if (document.webkitExitFullscreen) {
             document.webkitExitFullscreen();
         }
-        document.querySelector('.fullscreen').innerHTML = 'Plein écran';
+        document.querySelector('.fullscreen').innerHTML = '<img src="assets/icons/fs.svg">Plein écran';
     }
 }
 
@@ -67,7 +67,7 @@ function switchTheme() {
 
         isDarkMode = true;
 
-        document.querySelector('.switcher').innerHTML = 'Changer au thème clair';
+        document.querySelector('.switcher').innerHTML = '<img src="assets/icons/day.svg">Changer au thème clair';
     }
 
 
@@ -78,10 +78,39 @@ function switchTheme() {
 
         isDarkMode = false;
 
-        document.querySelector('.switcher').innerHTML = 'Changer au thème sombre';
+        document.querySelector('.switcher').innerHTML = '<img src="assets/icons/night.svg">Changer au thème sombre';
     }
 
 }
+
+
+// /* -----------------------------------
+// SHOW HIDE TOOL
+// -------------------------------------- */
+
+var tooltipOptions = document.getElementById('tooltipOpt')
+
+isTooltipOn = true;
+
+function activateTooltip() {
+
+    if (isTooltipOn == false) {
+        tooltip.classList.remove('hiddenHard')
+        isTooltipOn = true;
+        tooltipOptions.innerHTML = "<img src='assets/icons/tooltip.svg'>Cacher l'aide au notes";
+    }
+
+
+    else if (isTooltipOn == true) {
+        tooltip.classList.add('hiddenHard')
+        isTooltipOn = false;
+        tooltipOptions.innerHTML = "<img src='assets/icons/tooltip.svg' style='opacity:0.5'>Montrer l'aide au notes";
+    }
+}
+tooltipOptions.addEventListener('click', function () {
+    activateTooltip();
+});
+
 
 
 // /* -----------------------------------
