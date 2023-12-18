@@ -62,7 +62,7 @@
 .bookmarks div {
   font-weight: 400;
   width: 100px;
-  writing-mode: sideways-rl;
+  /* writing-mode: sideways-rl; */
   font-size: var(--fs-middle);
   height: 100vh;
   box-sizing: border-box;
@@ -76,7 +76,7 @@
   background-color: var(--color-white);
   height: 100%;
   display: flex;
-    border-radius: 0 var(--border-s) var(--border-s) 0;
+    border-radius: 0 12px 0 0;
 
 }
 
@@ -104,6 +104,7 @@
   width: 100px;
   background-color: var(--color-white);
   box-shadow: 0 0 10px 0 var(--color-shadow);
+  border-radius: 12px 0 0 0;
 }
 
 
@@ -111,6 +112,9 @@
   position: sticky;
   top: 12px;
   display: flex;
+  width: fit-content;
+  writing-mode: vertical-rl;
+  transform: translateX(250%);
 }
 
 
@@ -118,10 +122,11 @@
   writing-mode: tb;
   font-size: var(--fs-big);
   margin-bottom: 5px;
-  height: var(--fs-big) !important;
   display: flex;
   justify-content: center;
   font-family: var(--ff-text) !important;
+
+  width: fit-content;
 }
 
 /******************* LEFT SIDE *******************/
@@ -177,13 +182,19 @@
   font-weight: 400;
   font-size: 16px;
   display: flex;
-  align-items: center;
   box-sizing: border-box;
   padding: var(--space-s) 0;
-  writing-mode: sideways-lr;
+  /* writing-mode: sideways-lr; */
   box-shadow: -5px 0 20px 0 var(--color-shadow);
   font-family: var(--ff-text);
   color: black;
+  text-transform: uppercase;
+}
+
+.headerTitles {
+  transform: rotate(180deg);
+ width: 100%;
+writing-mode: vertical-rl;
 }
 
 .header div:nth-child(1) {
@@ -268,19 +279,17 @@
 
 .sommairePage div {
   border-radius: var(--border-m);
-  border: 1px dashed var(--color-black);
+  border: 1px dashed white;
   background-color: transparent;
   padding: var(--space-s);
   margin: var(--space-m) 0;
   transition: var(--trans-quick);
-  /* box-shadow: inset 0px 0 20px -10px var(--color-white); */
-  color: black;
+  color: white;
   text-transform: unset;
 }
 
 .sommairePage div:hover {
   cursor: pointer;
-  /* border: 1px dashed var(--color-secondary-light); */
 
   background-color: #e8e6e291;
   transition: var(--trans-quick);
@@ -493,7 +502,7 @@
   flex-direction: column !important;
   align-items: center;
   justify-content: space-around;
-  aspect-ratio: 1;
+  min-height: 120px;
   color: white;
   text-decoration: none !important;
 }
@@ -503,6 +512,8 @@
   align-items: center;
   justify-content: inherit;
   height: 100%;
+  min-height: 120px;
+width: 100%;
 }
 
 .optionsPage>div>a>button:hover {

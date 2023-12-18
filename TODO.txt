@@ -1,6 +1,3 @@
-
-
-
 ## NOT IMPORTANT:
 - sticky h3 not working
 - jump ton note when click on note prises panel

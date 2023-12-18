@@ -1,6 +1,3 @@
-console.log("%cGlace sans tain, par Pablo Moreno. 2021. pablomoreno@pm.me", "color: blue; font-size: 10px; background-color:white;");
-
-
 /*
 START PAGE
 */
@@ -74,9 +71,9 @@ function hideAllSide() {
     document.getElementById('bookmarkPartieIIIOff').style.backgroundColor = ('inherit');
     document.getElementById('bookmarkPartieFinOff').style.backgroundColor = ('inherit');
 
-    sommaireButton.innerHTML = ('<span>🗂 Index</span>');
-    notesButton.innerHTML = ('<span>📝 Prises de notes</span>&nbsp;<span class="numbernotes">(0)</span></span>');
-    optionsButton.innerHTML = ('<span>⚙️ Options</span>');
+    sommaireButton.innerHTML = ('<span class="headerTitles">🗂 Sommaire</span>');
+    notesButton.innerHTML = ('<span class="headerTitles">📝 Prises de notes</span>&nbsp;<span class="numbernotes">(0)</span></span>');
+    optionsButton.innerHTML = ('<span class="headerTitles">⚙️ Options</span>');
 
     updateNotes()
 
@@ -96,7 +93,7 @@ function displaySommaire() {
         sommairePanel.classList.remove('showed');
         hideButtonsSide()
         hidePanel()
-        sommaireButton.innerHTML = ('<span>🗂 Index</span>');
+        sommaireButton.innerHTML = ('<span class="headerTitles">🗂 Sommaire</span>');
         document.getElementById('bookmarkPartieIOff').style.backgroundColor = ('inherit');
         document.getElementById('bookmarkPartieIIOff').style.backgroundColor = ('inherit');
         document.getElementById('bookmarkPartieIIIOff').style.backgroundColor = ('inherit');
@@ -109,7 +106,7 @@ function displaySommaire() {
         sommaireButton.classList.add('sommaireButtonOn')
         sommairePanel.style.display = ('block');
         sommairePanel.classList.add('showed')
-        sommaireButton.innerHTML = ('<span>✕ <small>[ESC]</small></span>');
+        sommaireButton.innerHTML = ('<span class="headerTitles">✕ <small>[ESC]</small></span>');
         document.getElementById('bookmarkPartieIOff').style.backgroundColor = ('var(--color-special-1)');
         document.getElementById('bookmarkPartieIIOff').style.backgroundColor = ('var(--color-special-1)');
         document.getElementById('bookmarkPartieIIIOff').style.backgroundColor = ('var(--color-special-1)');
@@ -133,7 +130,7 @@ function forceDisplayNotes() {
     notesButton.classList.add('sommaireButtonOn')
     notesPanel.style.display = ('block');
     notesPanel.classList.add('showed')
-    notesButton.innerHTML = ('<span>✕ <small>[ESC]</small></span>');
+    notesButton.innerHTML = ('<span class="headerTitles">✕ <small>[ESC]</small></span>');
     document.getElementById('bookmarkPartieIOff').style.backgroundColor = ('var(--color-special-2)');
     document.getElementById('bookmarkPartieIIOff').style.backgroundColor = ('var(--color-special-2)');
     document.getElementById('bookmarkPartieIIIOff').style.backgroundColor = ('var(--color-special-2)');
@@ -147,7 +144,7 @@ function displaynotes() {
         notesPanel.classList.remove('showed');
         hideButtonsSide()
         hidePanel()
-        notesButton.innerHTML = ('<span>📝 Prises de notes</span>&nbsp;<span class="numbernotes">(0)</span></span>');
+        notesButton.innerHTML = ('<span class="headerTitles">📝 Prises de notes</span>&nbsp;<span class="numbernotes">(0)</span></span>');
         updateNotes()
         document.getElementById('bookmarkPartieIOff').style.backgroundColor = ('inherit');
         document.getElementById('bookmarkPartieIIOff').style.backgroundColor = ('inherit');
@@ -161,7 +158,7 @@ function displaynotes() {
         notesButton.classList.add('sommaireButtonOn')
         notesPanel.style.display = ('block');
         notesPanel.classList.add('showed')
-        notesButton.innerHTML = ('<span>✕ <small>[ESC]</small></span>');
+        notesButton.innerHTML = ('<span class="headerTitles">✕ <small>[ESC]</small></span>');
         document.getElementById('bookmarkPartieIOff').style.backgroundColor = ('var(--color-special-2)');
         document.getElementById('bookmarkPartieIIOff').style.backgroundColor = ('var(--color-special-2)');
         document.getElementById('bookmarkPartieIIIOff').style.backgroundColor = ('var(--color-special-2)');
@@ -183,7 +180,7 @@ function displayoptions() {
         optionsPanel.classList.remove('showed');
         hideButtonsSide()
         hidePanel()
-        optionsButton.innerHTML = ('<span>⚙️ Options</span>');
+        optionsButton.innerHTML = ('<span class="headerTitles">⚙️ Options</span>');
         document.getElementById('bookmarkPartieIOff').style.backgroundColor = ('inherit');
         document.getElementById('bookmarkPartieIIOff').style.backgroundColor = ('inherit');
         document.getElementById('bookmarkPartieIIIOff').style.backgroundColor = ('inherit');
@@ -196,7 +193,7 @@ function displayoptions() {
         optionsButton.classList.add('sommaireButtonOn')
         optionsPanel.style.display = ('block');
         optionsPanel.classList.add('showed')
-        optionsButton.innerHTML = ('<span>✕ <small>[ESC]</small></span>');
+        optionsButton.innerHTML = ('<span class="headerTitles">✕ <small>[ESC]</small></span>');
         document.getElementById('bookmarkPartieIOff').style.backgroundColor = ('var(--color-special-3)');
         document.getElementById('bookmarkPartieIIOff').style.backgroundColor = ('var(--color-special-3)');
         document.getElementById('bookmarkPartieIIIOff').style.backgroundColor = ('var(--color-special-3)');

@@ -21,7 +21,7 @@ html::-webkit-scrollbar {
 
 ::selection {
     color: var(--color-white);
-    background-color: var(--thisColor);
+    background-color: orangered;
 }
 
 
@@ -128,12 +128,14 @@ button:hover {
 .foldleft {
     box-shadow: 3px 0 26px 0 var(--color-shadow);
     position: absolute;
+    border-radius: 12px 0 0 0;
 }
 
 .foldright {
     box-shadow: 3px 0 26px 0 var(--color-shadow);
     position: absolute;
     right: 0;
+    border-radius: 0 12px 0 0;
 }
 
 .bookLeft {
@@ -562,12 +564,12 @@ sup {
     flex-direction: column;
     justify-content: space-around;
     padding: var(--space-xxl);
-    box-shadow: inset 0 0 30px white;
+    /* box-shadow: inset 0 0 30px white; */
     text-align: center;
     backdrop-filter: blur(10px);
     box-sizing: border-box;
     border: none;
-    border-radius: 10px;
+    border-radius: 0;
 }
 
 .footnote.fullFigure img {

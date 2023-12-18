@@ -56,7 +56,7 @@ function hideCibles() {
 
 // CHANGING PAGES
 function lecturePartieIntro() {
-    console.log('SHOW INTRO')
+    // console.log('SHOW INTRO')
     book.setAttribute('data-reading', 'partieIntro')
 
 
@@ -100,7 +100,7 @@ function lecturePartieIntro() {
 }
 
 function lecturePartieI() {
-    console.log('SHOW PARTIE1')
+    // console.log('SHOW PARTIE1')
     book.setAttribute('data-reading', 'partieI')
 
 
@@ -146,7 +146,7 @@ function lecturePartieI() {
 
 
 function lecturePartieII() {
-    console.log('SHOW PARTIE2')
+    // console.log('SHOW PARTIE2')
     book.setAttribute('data-reading', 'partieII')
 
 
@@ -190,7 +190,7 @@ function lecturePartieII() {
 }
 
 function lecturePartieIII() {
-    console.log('SHOW PARTIE3')
+    // console.log('SHOW PARTIE3')
     book.setAttribute('data-reading', 'partieIII')
 
     document.querySelector('.sommairePartieIntro').classList.remove('indexSelected')
@@ -232,7 +232,7 @@ function lecturePartieIII() {
 }
 
 function lecturePartieFin() {
-    console.log('SHOW FIN')
+    // console.log('SHOW FIN')
     book.setAttribute('data-reading', 'partieFin')
 
     document.querySelector('.sommairePartieIntro').classList.remove('indexSelected')
