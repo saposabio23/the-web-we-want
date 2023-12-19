@@ -42,7 +42,9 @@ li {
   }
 
 u{
-    text-shadow: 0 0 10px var(--color-black);
+    text-shadow: 0 0 10px var(--thisColor);
+    text-decoration: none;
+
 }
 
 .op50 {
@@ -73,11 +75,11 @@ textarea {
     z-index: 99;
     border-radius: 999px;
     font-size: var(--fs-small);
-    padding: 0 5px;
+    padding: 0px 8px;
     margin-top: 5px;
-    background-color: var(--color-special-2);
-    color: var(--color-black);
-    box-shadow: 0 0 10px 0 var(--color-special-2);
+    background-color: var(--color-black);
+    color: var(--color-white);
+    box-shadow: 0 0 6px 0 var(--color-black);
 }
 
 

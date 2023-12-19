@@ -12,8 +12,10 @@ function witchColor() {
 
   console.log("%cTHE WEB WE WANT · Pablo MORENO → Mémoire DNSEP → ESAD Amiens 2023/2024. pablomoreno@pm.me", "color: white; font-size: 10px; background-color:" + randomColor + ";");
 
-  link = document.createElement('link');
-  link.rel = 'icon';
+  // link = document.createElement('link');
+  // link.rel = 'icon';
+
+  var link = document.querySelector("link[rel~='icon']");
 
   if (randomColor === "forestgreen") {
     link.href = 'assets/icons/icon-green.ico';
