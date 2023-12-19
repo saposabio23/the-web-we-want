@@ -37,6 +37,9 @@ b{
     /* text-shadow: 0 0 10px var(--thisColor); */
 }
 
+li {
+    margin-bottom: var(--space-s);
+  }
 
 u{
     text-shadow: 0 0 10px var(--color-black);

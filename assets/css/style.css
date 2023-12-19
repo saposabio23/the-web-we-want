@@ -478,6 +478,7 @@ textarea:focus {
     margin: var(--space-xl) 0 var(--space-xxl) 0;
     line-height: var(--lh-normal);
     font-size: var(--fs-middle);
+    text-indent: 0 !important;
 }
 
 /******************* FOOTNOTE *******************/
