@@ -20,7 +20,11 @@ function lancerTout() {
     setTimeout(function () {
         document.querySelector('.tout').style.visibility = ('visible')
         document.querySelector('.tout').classList.remove('appear');
+        setTimeout(function () {
+            document.querySelector('.start').style.display = ('none')
+        }, 5000)
     }, 2000)
+
 }
 
 supertitlefront.addEventListener('input', function () {
@@ -30,6 +34,7 @@ supertitlefront.addEventListener('input', function () {
 
     if (value.match(passw)) {
         lancerTout()
+
     }
     else {
         // document.querySelector('#infoStart').style.display = ('none') 

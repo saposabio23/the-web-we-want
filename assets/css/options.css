@@ -187,7 +187,7 @@
   /* writing-mode: sideways-lr; */
   box-shadow: -5px 0 20px 0 var(--color-shadow);
   font-family: var(--ff-text);
-  color: black;
+  color: white;
   text-transform: uppercase;
 }
 

@@ -33,6 +33,15 @@ small {
     position: absolute; */
 }
 
+b{
+    /* text-shadow: 0 0 10px var(--thisColor); */
+}
+
+
+u{
+    text-shadow: 0 0 10px var(--color-black);
+}
+
 .op50 {
     opacity: 0.5 !important;
 }
