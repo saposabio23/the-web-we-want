@@ -585,6 +585,7 @@ sup {
     font-size: var(--fs-normal) !important;
     line-height: var(--lh-normal);
     color: white;
+    max-width: 750px;
 }
 
 .footnote.fullFigure sup {

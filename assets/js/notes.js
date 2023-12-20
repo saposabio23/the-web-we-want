@@ -221,7 +221,7 @@ function getSelectedText() {
 
     let notesRemarqueeSaved = document.createElement("p");
     notesRemarqueeSaved.className = "notesCopySelection"
-    notesRemarqueeSaved.innerHTML = '"' + selectedText + '"';
+    notesRemarqueeSaved.innerHTML = '« ' + selectedText + ' »';
     notesCopy.appendChild(notesRemarqueeSaved);
 
     let notesEcrite = document.createElement("textarea");
