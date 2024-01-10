@@ -48,11 +48,16 @@ a:hover {
     text-decoration: underline;
     text-decoration-style: dotted;
     word-break: break-all;
+    transition: var(--trans-quick);
+
 }
 
 a:hover {
     text-decoration: underline;
     cursor: pointer;
+    text-shadow: 0 0 0px transparent;
+    color: var(--thisColor);
+    transition: var(--trans-quick);
 }
 
 button a {
@@ -108,7 +113,7 @@ button:hover {
     z-index: 10;
     position: relative;
     min-height: 100vh;
-
+    border-radius: 12px 12px 0 0;
     transition: var(--trans-quick);
 }
 
@@ -144,6 +149,8 @@ button:hover {
     width: 50%;
     height: 100%;
     /* box-shadow: 0 0 30px 0 var(--color-shadow); */
+    border-radius: 12px 0 0 0;
+
 }
 
 
@@ -152,6 +159,8 @@ button:hover {
     height: 100%;
     /* box-shadow: 0 0 30px 0 var(--color-shadow); */
     z-index: 10;
+    border-radius: 0 12px 0 0;
+
 }
 
 .bookRight>div {
@@ -223,7 +232,7 @@ h4 {
 
 p {
     text-indent: 15px;
- letter-spacing: 0.2px;
+    letter-spacing: 0.2px;
 }
 
 section {
@@ -366,7 +375,7 @@ section {
     opacity: 0;
     text-align: center;
     line-height: var(--lh-middle);
-    margin: var(--space-l) 0 0 0;
+    margin: var(--space-s) 0 0 0;
     color: white;
     position: absolute;
     top: var(--space-s);
@@ -399,7 +408,7 @@ section {
     }
 
     50% {
-        opacity: 1;
+        opacity: .7;
     }
 
     100% {
@@ -639,4 +648,13 @@ sup {
     box-sizing: border-box;
     font-size: var(--fs-small);
     line-height: var(--lh-normal);
+    transition: var(--trans-quick);
+    max-width: 450px;
+    margin: var(--space-l) auto 0 auto;
+}
+
+.credits:hover {
+    box-shadow: 0 0 10px var(--thisColor);
+    transition: var(--trans-quick);
+
 }
