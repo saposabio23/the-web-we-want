@@ -46,13 +46,11 @@ a {
     text-decoration: none;
 }
 
-.sommairePage a,
-.credits a {
+.sommairePage a {
     text-shadow: none;
 }
 
-.sommairePage a:hover,
-.credits a:hover {
+.sommairePage a:hover {
     text-shadow: none;
     color: inherit;
 }
