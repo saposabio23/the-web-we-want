@@ -45,15 +45,14 @@ a:active,
 a:visited,
 a:hover {
     color: inherit;
-    text-decoration: underline;
-    text-decoration-style: dotted;
+    text-decoration: none;
     word-break: break-all;
     transition: var(--trans-quick);
 
 }
 
 a:hover {
-    text-decoration: underline;
+    text-decoration: none;
     cursor: pointer;
     text-shadow: 0 0 0px transparent;
     color: var(--thisColor);
