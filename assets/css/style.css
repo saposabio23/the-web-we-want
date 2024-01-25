@@ -21,7 +21,7 @@ html::-webkit-scrollbar {
 
 ::selection {
     color: var(--color-white);
-    background-color: orangered;
+    background-color: var(--color-black);
 }
 
 
@@ -89,7 +89,19 @@ button:hover {
     transition: var(--trans-quick);
     color: var(--color-black);
     /* border: 1px dashed var(--color-secondary-light); */
+}
 
+#downloadTxt {
+    text-shadow: 0 0 0px transparent;
+    color: inherit;
+    text-decoration: underline;
+
+}
+
+#downloadTxt:hover {
+    text-shadow: 0 0 0px transparent;
+    color: inherit;
+    text-decoration: none;
 
 }
 

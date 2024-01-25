@@ -235,7 +235,7 @@ function highlightRange(range) {
   var newNode = document.createElement("div");
   newNode.setAttribute(
     "style",
-    "background-color:  var(--color-special-2); display: inline; color: var(--color-black);"
+    "background-color:  var(--color-highlight); display: inline; color: var(--color-black);"
   );
   range.surroundContents(newNode);
 }
@@ -405,21 +405,20 @@ function save() {
 
   var date = new Date();
   jour = date.toLocaleDateString("fr-FR");
-  heure = date.getHours() + ":" + date.getMinutes();
+  heure =
+    date.getHours() +
+    ":" +
+    (date.getMinutes() < 10 ? "0" : "") +
+    date.getMinutes();
 
   let infoNotes = document.createElement("p");
   infoNotes.className = "infoNotes";
-  infoNotes.innerHTML =
-    "Notes sauvegardées le " +
-    jour +
-    " à " +
-    heure +
-    "<br><br>pablomoreno@proton.me";
+  infoNotes.innerHTML = "Notes sauvegardées le " + jour + " à " + heure;
 
   body.appendChild(infoNotes);
 
   data =
-    '<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>The Web We Want - NOTES</title><style>body {font-family: sans-serif;margin: 50px auto;border: 1px dashed black;border-radius: 20px;max-width: 600px;padding: 20px 30px;box-sizing: border-box;}header {background-color: white;margin: auto;border: 1px dashed black;padding: 8px 12px;box-sizing: border-box;border-width: 0 0 1px 0;text-align: center;}header p{margin:0;text-align: center;line-height: 1.5;font-size: 16px;text-align: left;padding: 0;}header p:nth-child(1){font-weight: 900;font-size: 120%;}header p:nth-child(3) {margin-top: 12px;opacity: 0.5;}header h1 {margin: 12px 0;}h4 {color: orangered;margin: 0;}.block {border-radius: 10px;margin: 20px auto;font-size: 16px;line-height: 1.5;background-color: #e8e6e2;}.block div {font-size: 16px;color: black;display: flex;justify-content: space-between;padding: 8px 12px;}.block span {opacity: 0.4;}.block p:nth-child(2) {padding: 12px;text-indent: 0 !important;margin: 0 !important;background-color: #c4c2bc;}.block p:nth-child(3){padding: 12px;margin: 0;}.infoNotes{font-size: 80%;text-align: center;opacity: 0.5}* {-webkit-print-color-adjust: exact !important;color-adjust: exact !important;print-color-adjust: exact !important;}</style></head>' +
+    '<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>The Web We Want - NOTES</title><style>body {font-family: sans-serif;margin: 50px auto;border: 1px dashed black;border-radius: 20px;max-width: 600px;padding: 15px;box-sizing: border-box;}header {background-color: white;margin: auto;border: 1px dashed black;padding: 8px 12px;box-sizing: border-box;border-width: 0 0 1px 0;text-align: center;}header p{margin:0;text-align: center;line-height: 1.5;font-size: 16px;text-align: left;padding: 0;}header p:nth-child(1){font-weight: 900;font-size: 120%;}header p:nth-child(3) {margin-top: 12px;opacity: 0.5;}header h1 {margin: 12px 0;}h4 {color: orangered;margin: 0;}.block {border-radius: 10px;margin: 20px auto;font-size: 16px;line-height: 1.5;background-color: #e8e6e2;}.block div {font-size: 16px;color: black;display: flex;justify-content: space-between;padding: 8px 12px;}.block span {opacity: 0.4;}.block p:nth-child(2) {padding: 12px;text-indent: 0 !important;margin: 0 !important;background-color: #c4c2bc;}.block p:nth-child(3){padding: 12px;margin: 0;}.infoNotes{font-size: 80%;text-align: center;opacity: 0.5;margin-bottom: 0;}* {-webkit-print-color-adjust: exact !important;color-adjust: exact !important;print-color-adjust: exact !important;}</style></head>' +
     "<header><p>The Web We Want</p><p>L’importance d’imaginer et de concevoir des espaces web<br>fait-main pour enrichir nos vies numériques</p><p>Pablo MORENO → Mémoire DNSEP → ESAD Amiens 2023/2024</p></header>" +
     body.innerHTML +
     "</html>";
